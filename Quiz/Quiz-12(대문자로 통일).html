@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>대문자로 통일</title>
+</head>
+<body>
+    <script>
+        
+
+        function solution(str){
+            let answer="";
+            
+            // 방법1 : toLowerCase()와 toUpperCase()를 이용 
+            for(let x of str){
+                // 내가 짠 코드...
+                // if(x != x.toUpperCase()){
+                //     answer = x.toUpperCase();
+                // }
+
+                // 선생님이 짜신 코드 
+                // if(x === x.toLowerCase()){
+                //     answer += x.toUpperCase();
+                // }
+                // else{
+                //     answer += x;
+                // }
+            }
+            
+            // 방법2 : 아스키 코드를 이용하는 방법
+            for(let x of str){
+                let num = x.charCodeAt();
+                // console.log(x);
+                if(num >= 97 && num <= 122){
+                    answer += String.fromCharCode(num - 32);
+                }else{
+                    answer += x;
+                }
+            }
+            return answer;
+
+        } // function 
+
+        let str = "ItisTimeToStudy";
+        console.log(solution(str));
+    </script>
+</body>
+</html>

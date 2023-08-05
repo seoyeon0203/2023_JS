@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>큰 수 출력하기</title>
+</head>
+<body>
+    <script>
+        
+
+        function solution(n){
+            let answer=[];
+
+            // 내가 짠 코드
+            // for(let i of n){
+            //     if(n[i++] > n[i]){
+            //         answer += n[i];
+            //     } 
+            // }
+            // return answer;
+
+            // 규정쌤이 짠 코드 
+            anser.push(arr[0]);
+            for(let i = 1; i < arr.length; i++){
+                if(arr[i] > arr[i-1]){
+                    anser.push(arr[i]);
+                }
+            }// for
+            return answer;
+         }   // function 
+        let arr =[ 7, 3, 9, 5, 6, 11];
+        console.log(solution(arr));
+    </script>
+</body>
+</html>
